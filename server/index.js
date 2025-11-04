@@ -7,7 +7,7 @@ const FileSync = require('lowdb/adapters/FileSync');
 const fs = require('fs');
 
 const DB_FILE = path.join(__dirname, 'db.json');
-if(!fs.existsSync(DB_FILE)) fs.writeFileSync(DB_FILE, JSON.stringify({ licenses: [], applications: [] }, null, 2));
+if (!fs.existsSync(DB_FILE)) fs.writeFileSync(DB_FILE, JSON.stringify({ licenses: [], applications: [] }, null, 2));
 
 const adapter = new FileSync(DB_FILE);
 const db = low(adapter);
@@ -20,16 +20,16 @@ app.use(express.json());
 const PORT = process.env.PORT || 4000;
 const ADMIN_KEY = process.env.ADMIN_KEY || 'dev-admin-key';
 
-function requireAdmin(req, res, next){
+function requireAdmin(req, res, next) {
   const key = req.get('x-admin-key') || req.query.adminKey;
-  if(!key || key !== ADMIN_KEY) return res.status(401).json({ error: 'unauthorized' });
+  if (!key || key !== ADMIN_KEY) return res.status(401).json({ error: 'unauthorized' });
   next();
 }
 
 // Create a license (admin only)
 app.post('/api/licenses', requireAdmin, (req, res) => {
   const { storeUrl, reseller, durationDays } = req.body;
-  if(!storeUrl) return res.status(400).json({ error: 'storeUrl is required' });
+  if (!storeUrl) return res.status(400).json({ error: 'storeUrl is required' });
   const key = `LIC-${nanoid(10).toUpperCase()}`;
   const createdAt = Date.now();
   const expiresAt = createdAt + ((durationDays || 365) * 24 * 60 * 60 * 1000);
@@ -41,14 +41,14 @@ app.post('/api/licenses', requireAdmin, (req, res) => {
 // Applicant endpoint - store application and optionally auto-approve (create license)
 app.post('/api/apply', (req, res) => {
   const { fullName, email, phone } = req.body || {};
-  if(!fullName || !email) return res.status(400).json({ error: 'fullName and email required' });
+  if (!fullName || !email) return res.status(400).json({ error: 'fullName and email required' });
   const createdAt = Date.now();
   const application = { id: nanoid(8), fullName, email, phone: phone || null, createdAt, status: 'pending' };
   db.get('applications').push(application).write();
 
   // Auto-approve and create license when AUTO_APPROVE env var is truthy
   const auto = process.env.AUTO_APPROVE === '1' || process.env.AUTO_APPROVE === 'true';
-  if(auto){
+  if (auto) {
     const key = `LIC-${nanoid(10).toUpperCase()}`;
     const expiresAt = createdAt + (365 * 24 * 60 * 60 * 1000);
     const license = { key, storeUrl: null, reseller: fullName, createdAt, expiresAt, active: true };
@@ -71,19 +71,19 @@ app.get('/api/licenses', requireAdmin, (req, res) => {
 app.get('/api/licenses/:key', (req, res) => {
   const { key } = req.params;
   const lic = db.get('licenses').find({ key }).value();
-  if(!lic) return res.status(404).json({ error: 'not_found' });
+  if (!lic) return res.status(404).json({ error: 'not_found' });
   res.json(lic);
 });
 
 // Validate a license
 app.post('/api/licenses/validate', (req, res) => {
   const { key, storeUrl } = req.body;
-  if(!key) return res.status(400).json({ valid: false, reason: 'missing_key' });
+  if (!key) return res.status(400).json({ valid: false, reason: 'missing_key' });
   const lic = db.get('licenses').find({ key }).value();
-  if(!lic) return res.json({ valid: false, reason: 'not_found' });
-  if(!lic.active) return res.json({ valid: false, reason: 'inactive' });
-  if(Date.now() > lic.expiresAt) return res.json({ valid: false, reason: 'expired' });
-  if(lic.storeUrl && storeUrl && lic.storeUrl !== storeUrl) return res.json({ valid: false, reason: 'store_mismatch' });
+  if (!lic) return res.json({ valid: false, reason: 'not_found' });
+  if (!lic.active) return res.json({ valid: false, reason: 'inactive' });
+  if (Date.now() > lic.expiresAt) return res.json({ valid: false, reason: 'expired' });
+  if (lic.storeUrl && storeUrl && lic.storeUrl !== storeUrl) return res.json({ valid: false, reason: 'store_mismatch' });
   return res.json({ valid: true, license: lic });
 });
 
