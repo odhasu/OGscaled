@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>ogscaled.info — Reselling</title>
+  <!-- Fonts -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700;800&family=Inter:wght@300;400;600;700;800&display=swap"
+    rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+
+<body>
+  <header class="site-header" id="siteHeader">
+    <div class="container">
+      <div class="header-bar">
+        <div class="header-left"></div>
+        <div class="logo">
+          <a href="/">
+            <img src="assets/Screenshot%202025-10-31%20214323.png" class="force-bright" alt="scaled.info logo"
+              onerror="this.style.display='none';document.querySelector('.logo-text').style.display='inline-block'" />
+          </a>
+          <span class="logo-text" style="display:none">OgResell</span>
+        </div>
+        <nav class="site-nav" aria-label="Main navigation">
+          <button id="applyTop" class="apply-pill" aria-haspopup="dialog">Apply</button>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section id="home" class="hero">
+      <div class="hero-media">
+        <video id="heroVideo" src="assets/video.mp4" autoplay muted loop playsinline preload="auto"
+          disablepictureinpicture controlslist="nodownload"
+          style="width:100%;height:100%;object-fit:cover;object-position:100%70%;"></video>
+        <div class="hero-overlay"></div>
+      </div>
+      <div class="container hero-inner animate-on-scroll">
+        <span class="pill-badge"
+          style="background:linear-gradient(90deg, rgba(201,154,22,0.12), rgba(237,194,73,0.12));border:1px solid rgba(237,194,73,0.10);color:var(--white);">LIMITED
+          ACCESS</span>
+        <h2 class="hero-headline">How Our Average<br />Reselling Client Makes<br /><span
+            class="hero-amount">$14,648</span> / Month</h2>
+        <p class="hero-sub">We'll implement the exact full-stack system that's built multiple 6-figure reselling
+          coaching brands — without slow months or burning out on content creation.</p>
+        <div class="hero-actions">
+          <a class="cta primary" href="#apply" id="applyPrimary">Apply Now</a>
+        </div>
+
+        <div class="hero-stats animate-on-scroll">
+          <div class="stat">
+            <div class="num">$1.7M</div>
+            <div class="label">Client Revenue</div>
+          </div>
+          <div class="stat">
+            <div class="num">30+</div>
+            <div class="label">Clients Helped</div>
+          </div>
+          <div class="stat">
+            <div class="num">90</div>
+            <div class="label">Days to Transform</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="workflow container" id="workflow">
+      <h3 style="text-align:center">The Reseller Scaling System — Workflow</h3>
+      <div class="timeline" aria-label="Workflow timeline">
+        <div class="timeline-item animate-on-scroll">
+          <span class="week-pill">Weeks 1-2</span>
+          <div class="dot"></div>
+          <h4>Vendor Store & Offer Redesign</h4>
+          <p>Premium vendor store selling supplier access — High-ticket mentorship program structured — Tiered pricing
+            strategy implemented</p>
+        </div>
+        <div class="timeline-item animate-on-scroll">
+          <span class="week-pill">Week 3</span>
+          <div class="dot"></div>
+          <h4>Premium Discord Community</h4>
+          <p>Premium Discord server with paid access — Exclusive channels, bots & receipt generators — Community
+            engagement systems activated</p>
+        </div>
+        <div class="timeline-item animate-on-scroll">
+          <span class="week-pill">Weeks 4-5</span>
+          <div class="dot"></div>
+          <h4>Content That Converts</h4>
+          <p>90 days of magnetic content — Viral hooks & storytelling templates — Content-to-conversion system optimized
+          </p>
+        </div>
+        <div class="timeline-item animate-on-scroll">
+          <span class="week-pill">Weeks 6-7</span>
+          <div class="dot"></div>
+          <h4>Mentorship Program Launch</h4>
+          <p>High-ticket mentorship funnel built — 1-on-1 and group coaching structure — Student success & testimonial
+            systems</p>
+        </div>
+        <div class="timeline-item animate-on-scroll">
+          <span class="week-pill">Weeks 8-9</span>
+          <div class="dot"></div>
+          <h4>Scale & Optimize Revenue</h4>
+          <p>Multiple revenue streams optimized — Content strategy driving consistent sales — Community retention &
+            upsell systems</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer container">
+    <div>&copy; <span id="year"></span> ogscaled.info — All rights reserved.</div>
+  </footer>
+
+  <!-- Apply Modal -->
+  <div id="applyModal" class="modal hidden" role="dialog" aria-modal="true" aria-hidden="true">
+    <div class="modal-inner">
+      <button id="closeModal" aria-label="Close">×</button>
+      <h4>Apply to Resell</h4>
+      <form id="applyForm">
+        <input name="fullName" placeholder="Full name" required />
+        <input name="email" type="email" placeholder="Email" required />
+        <input name="phone" placeholder="Phone" required />
+        <button type="submit">Submit Application</button>
+      </form>
+      <div id="formMessage"></div>
+    </div>
+  </div>
+
+  <script src="js/app.js"></script>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+
+</html>
