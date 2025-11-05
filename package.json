@@ -19,6 +19,14 @@
   ],
   "author": "Scaled.info",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/odhasu/OGscaled.git"
+  },
+  "bugs": {
+    "url": "https://github.com/odhasu/OGscaled/issues"
+  },
+  "homepage": "https://github.com/odhasu/OGscaled#readme",
   "devDependencies": {
     "vite": "^5.0.0",
     "eslint": "^8.0.0",
