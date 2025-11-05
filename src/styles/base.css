@@ -1,0 +1,10 @@
+/* Base: resets and element-level defaults */
+/* Keep minimal to avoid conflicts until extraction completes */
+
+html, body {
+  /* placeholder; real base styles will be moved from legacy.css */
+}
+
+/* Utility to hide scrollbar via class (if needed) */
+.scrollbar-hide::-webkit-scrollbar { display: none; }
+.scrollbar-hide { scrollbar-width: none; }

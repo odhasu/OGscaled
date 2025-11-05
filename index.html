@@ -18,10 +18,9 @@
   
   <!-- Organized stylesheets -->
   <link rel="stylesheet" href="src/styles/main.css">
-  <link rel="stylesheet" href="css/timeline.css">
   
   <!-- Stripe Integration -->
-  <script src="https://js.stripe.com/basil/stripe.js"></script>
+    <script src="https://js.stripe.com/basil/stripe.js"></script>
 </head>
 
 <body style="overflow: unset;">
@@ -345,7 +344,7 @@
           <div
             class="md:absolute md:left-1/2 md:top-1/2 md:-translate-x-1/2 md:-translate-y-1/2 animate-fadeInLeft delay-200">
             <img src="assets/ogscaled.png" alt="OGScaled.info" class="h-8 sm:h-10 w-auto"></div>
-          <div class="ml-auto animate-fadeInRight delay-300"><button
+          <div class="ml-auto animate-fadeInRight delay-300"><button data-apply-trigger
               class="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md font-medium focus-visible:outline-none disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg]:size-4 [&amp;_svg]:shrink-0 bg-primary text-primary-foreground hover:bg-primary/90 h-10 glass-button-primary px-4 sm:px-6 py-2 sm:py-2.5 text-sm sm:text-base">Apply<svg
                 xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
                 stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
@@ -426,7 +425,7 @@
             <p class="text-gray-400 text-sm md:text-base max-w-md mb-3 leading-tight animate-fadeInUp delay-600">We'll
               implement the exact full stack system that's built multiple 6-figure reselling coaching brands - without
               any slow months or burning out from content creation.</p>
-            <div class="flex flex-col sm:flex-row gap-4 justify-start mt-6"><button
+            <div class="flex flex-col sm:flex-row gap-4 justify-start mt-6"><button data-apply-trigger
                 class="inline-flex items-center justify-center gap-2 whitespace-nowrap font-medium focus-visible:outline-none disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg]:size-4 [&amp;_svg]:shrink-0 bg-primary text-primary-foreground hover:bg-primary/90 h-11 rounded-md glass-button-primary px-8 py-6 text-lg animate-scaleIn delay-700">Apply
                 Now<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
                   stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
@@ -2174,6 +2173,8 @@
   
   <!-- Timeline functionality -->
   <script src="src/scripts/timeline.js"></script>
+  <!-- Apply modal functionality -->
+  <script src="src/scripts/apply-modal.js"></script>
   <iframe name="__privateStripeController0351" frameborder="0" allowtransparency="true" scrolling="no"
     role="presentation" allow="payment *"
     src="https://js.stripe.com/v3/controller-with-dual-preconnect-treatment-75c3850cf1cda53fd2830401b45d253e.html#__shared_params__[version]=basil&amp;__shared_params__[light_experiment_assignments]=%7B%22token%22%3A%22358c6c83-f0cb-4bec-bf79-e0a40f8091c0%22%2C%22assignments%22%3A%7B%22link_controller_preconnect_merchant_ui_api%22%3A%22treatment%22%7D%7D&amp;apiKey=pk_live_51RsuIdBebEtjJvnK4QRVhgpmWsz8nMSFJLnP8n4Lxm1QEzQcoRFj2CHVTnQj0KhCPLDvGo3aTXMXu4SUPjb38IIO00IJTVp0Pn&amp;apiVersion=2025-03-31.basil&amp;stripeJsId=358c6c83-f0cb-4bec-bf79-e0a40f8091c0&amp;stripeObjId=sobj-2de1e231-1bc5-48fa-bfdb-2b8cf6d0e714&amp;firstStripeInstanceCreatedLatency=15&amp;controllerCount=1&amp;isCheckout=false&amp;stripeJsLoadTime=1762285586744&amp;manualBrowserDeprecationRollout=false&amp;mids[guid]=NA&amp;mids[muid]=a7e113ba-ffd2-41f9-b9b7-cd2ee2936aeb1c5ec7&amp;mids[sid]=f8837bf7-1c38-4407-93af-27e15ce537db6563fe&amp;referrer=https%3A%2F%2Fscaled.info%2Freselling&amp;controllerId=__privateStripeController0351"

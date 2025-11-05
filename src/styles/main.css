@@ -1,13 +1,17 @@
 /* Main stylesheet aggregator */
-/* Order: variables/base -> layout -> components -> utilities -> legacy (last) */
+/* Order: variables/base -> typography -> layout -> components -> utilities -> animations -> legacy -> custom */
 
-/* Placeholder imports for future modularization */
-/* @import './variables.css'; */
-/* @import './base.css'; */
-/* @import './layout.css'; */
-/* @import './components.css'; */
-/* @import './utilities.css'; */
-/* @import './animations.css'; */
+/* Modular imports (to be populated incrementally) */
+@import './variables.css';
+@import './base.css';
+@import './typography.css';
+@import './layout.css';
+@import './components.css';
+@import './utilities.css';
+@import './animations.css';
 
 /* Large legacy stylesheet (temporarily kept intact) */
 @import './legacy.css';
+
+/* Project-specific custom styles (modal, overrides, etc.) */
+@import './custom.css';

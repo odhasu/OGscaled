@@ -1,0 +1,83 @@
+/* Custom UI styles for modal and related elements */
+
+/* Lock body scroll when modal is open */
+body.modal-open { overflow: hidden; }
+
+/* Fullscreen overlay */
+.apply-modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 9999;
+}
+
+/* Modal container layout */
+.apply-modal-container {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding-top: 10vh;
+  z-index: 10000;
+  pointer-events: none;
+}
+
+/* Inner container to re-enable pointer interactions */
+.apply-modal-inner {
+  position: relative;
+}
+
+/* Top-right close bar alignment */
+.apply-modal-topbar {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: -52px;
+  position: relative;
+  z-index: 100;
+  padding-right: 12px;
+  padding-top: 32px;
+}
+
+/* Close button visual */
+.apply-modal-close {
+  padding: 8px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.1);
+  -webkit-backdrop-filter: blur(20px);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+/* Card panel style */
+.apply-modal-card {
+  background: linear-gradient(135deg, rgba(192, 192, 192, 0.08) 0%, rgba(169, 169, 169, 0.05) 100%);
+  -webkit-backdrop-filter: blur(40px);
+  backdrop-filter: blur(40px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  box-shadow:
+    rgba(0, 0, 0, 0.5) 0px 20px 40px -10px,
+    rgba(255, 255, 255, 0.2) 0px 2px 4px 0px inset,
+    rgba(0, 0, 0, 0.1) 0px -2px 4px 0px inset;
+}
+
+/* Chip badge style */
+.apply-modal-chip {
+  background: rgba(255, 255, 255, 0.05);
+  -webkit-backdrop-filter: blur(20px);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* Inputs style */
+.apply-input {
+  background: rgba(255, 255, 255, 0.05);
+  -webkit-backdrop-filter: blur(20px);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: #fff;
+  outline: none;
+}
