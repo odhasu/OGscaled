@@ -1,0 +1,33 @@
+{
+  "name": "ogresell-website",
+  "version": "2.0.0",
+  "description": "Professional reselling coaching platform website",
+  "main": "src/scripts/main.js",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "lint": "eslint src/**/*.js",
+    "format": "prettier --write \"src/**/*.{js,css,html}\""
+  },
+  "keywords": [
+    "reselling",
+    "coaching",
+    "e-commerce",
+    "mentorship"
+  ],
+  "author": "Scaled.info",
+  "license": "MIT",
+  "devDependencies": {
+    "vite": "^5.0.0",
+    "eslint": "^8.0.0",
+    "prettier": "^3.0.0",
+    "@vitejs/plugin-legacy": "^5.0.0"
+  },
+  "dependencies": {
+    "autoprefixer": "^10.4.16",
+    "postcss": "^8.4.32",
+    "tailwindcss": "^3.4.0"
+  }
+}
