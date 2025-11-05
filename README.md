@@ -68,6 +68,12 @@ The CSS is organized into modular files for better maintainability:
 - **animations.css**: Keyframe animations
 - **main.css**: Central import file
 
+### Current reorganization status (Nov 2025)
+
+- A very large historical stylesheet (`css/styles.css`, ~125k lines) has been copied to `src/styles/legacy.css` and is now loaded via `src/styles/main.css`.
+- `index.html` references only `src/styles/main.css`, so we can safely extract blocks from `legacy.css` into the modular files above without touching HTML.
+- As we extract sections (variables/base/typography/components/utilities), we will delete them from `legacy.css` until it can be removed.
+
 ## 🔧 JavaScript Architecture
 
 The JavaScript is organized into ES6 modules:
