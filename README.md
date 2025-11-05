@@ -1,6 +1,25 @@
-# OGResell Website
+# OGScaled.info
 
-A professional reselling coaching platform built with modern web technologies.
+> A professional reselling coaching platform built with modern web technologies
+
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Vite](https://img.shields.io/badge/Vite-5.0-646CFF?logo=vite)](https://vitejs.dev/)
+[![Tailwind CSS](https://img.shields.io/badge/Tailwind-3.4-38B2AC?logo=tailwind-css)](https://tailwindcss.com/)
+
+## 🎯 About
+
+OGScaled is a comprehensive reselling coaching platform that helps entrepreneurs scale their e-commerce businesses. The website features interactive timelines, video testimonials, and a streamlined application process for coaching programs.
+
+**Live Site**: [OGScaled.info](https://ogscaled.info)
+
+### Key Features
+
+- 🎥 Interactive video testimonials from successful students
+- 📊 Animated timeline showcasing program milestones
+- 💳 Integrated Stripe payment processing
+- 📱 Fully responsive design with glass morphism effects
+- ⚡ Lightning-fast performance with Vite
+- 🎨 Modular CSS architecture for easy maintenance
 
 ## 🚀 Project Structure
 
@@ -44,10 +63,14 @@ ogresell/
 ## 📦 Installation
 
 ```bash
+# Clone the repository
+git clone https://github.com/odhasu/OGscaled.git
+cd OGscaled
+
 # Install dependencies
 npm install
 
-# Start development server
+# Start development server (http://localhost:5173)
 npm run dev
 
 # Build for production
@@ -56,6 +79,28 @@ npm run build
 # Preview production build
 npm run preview
 ```
+
+## 🚀 Deployment
+
+This project is built with Vite and can be deployed to any static hosting service:
+
+### Vercel / Netlify / GitHub Pages
+
+```bash
+# Build the project
+npm run build
+
+# The dist/ folder contains production-ready files
+# Upload to your hosting service or configure auto-deploy from GitHub
+```
+
+### Environment Variables
+
+The Stripe integration uses a public key that is safe for client-side use. If you're forking this project:
+
+1. Replace the Stripe public key in your Stripe.js integration
+2. No `.env` file is required for the public key (it's meant to be visible)
+3. **Never** commit Stripe secret keys (sk_live_) to the repository
 
 ## 🎨 Style Architecture
 
@@ -81,6 +126,12 @@ The JavaScript is organized into ES6 modules:
 - **components/**: Reusable UI components as classes
 - **utils/**: Helper functions for DOM, API, etc.
 - **main.js**: App initialization and coordination
+
+### Key JavaScript Modules
+
+- **apply-modal.js**: Dynamic modal system with overlay, ESC/click-outside close, body scroll lock
+- **video-player.js**: Custom video player controls
+- **video-testimonials.js**: Testimonial carousel functionality
 
 ## 🚀 Features
 
@@ -115,12 +166,32 @@ The JavaScript is organized into ES6 modules:
 
 ## 📄 License
 
-MIT License - see LICENSE file for details
+MIT License - see [LICENSE](LICENSE) file for details
 
 ## 👥 Contributing
 
-Please read CONTRIBUTING.md for details on our code of conduct and development process.
+Contributions are welcome! Please read [CONTRIBUTING.md](CONTRIBUTING.md) for details on our code of conduct and development process.
+
+### Quick Start for Contributors
+
+1. Fork the repository
+2. Create a feature branch: `git checkout -b feature/amazing-feature`
+3. Make your changes and test locally: `npm run dev`
+4. Format and lint: `npm run format && npm run lint`
+5. Commit your changes: `git commit -m 'Add amazing feature'`
+6. Push to your fork: `git push origin feature/amazing-feature`
+7. Open a Pull Request
 
 ## 📞 Support
 
-For support, email support@scaled.info
+- **Website**: [OGScaled.info](https://ogscaled.info)
+- **Email**: support@scaled.info
+- **Issues**: [GitHub Issues](https://github.com/odhasu/OGscaled/issues)
+
+## 🙏 Acknowledgments
+
+Built with ❤️ by the Scaled.info team
+
+---
+
+**Note**: This is the public repository for OGScaled.info. For business inquiries, please visit our website or contact us directly.
