@@ -15,174 +15,11 @@
   <!-- Bundled assets -->
   <script type="module" crossorigin="" src="/assets/index-CdOi1tko.js"></script>
   <link rel="stylesheet" crossorigin="" href="/assets/index-D2FKtMc6.css">
-  
+
   <!-- Organized stylesheets -->
   <link rel="stylesheet" href="src/styles/main.css">
-  
+
   <!-- Stripe Integration -->
-    <script src="https://js.stripe.com/basil/stripe.js"></script>
-</head>
-
-<body style="overflow: unset;">
-  <div id="root">
-    <div role="region" aria-label="Notifications (F8)" tabindex="-1" style="pointer-events: none;">
-      <ol tabindex="-1"
-      --toast-svg-margin-end: 0px;
-      --toast-button-margin-start: auto;
-      --toast-button-margin-end: 0;
-      --toast-close-button-start: 0;
-      --toast-close-button-end: unset;
-      --toast-close-button-transform: translate(-35%, -35%)
-    }
-
-    [data-sonner-toaster][dir=rtl],
-    html[dir=rtl] {
-      --toast-icon-margin-start: 4px;
-      --toast-icon-margin-end: -3px;
-      --toast-svg-margin-start: 0px;
-      --toast-svg-margin-end: -1px;
-      --toast-button-margin-start: 0;
-      --toast-button-margin-end: auto;
-      --toast-close-button-start: unset;
-      --toast-close-button-end: 0;
-      --toast-close-button-transform: translate(35%, -35%)
-    }
-
-    [data-sonner-toaster] {
-      position: fixed;
-      width: var(--width);
-      font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
-      --gray1: hsl(0, 0%, 99%);
-      --gray2: hsl(0, 0%, 97.3%);
-      --gray3: hsl(0, 0%, 95.1%);
-      --gray4: hsl(0, 0%, 93%);
-      --gray5: hsl(0, 0%, 90.9%);
-      --gray6: hsl(0, 0%, 88.7%);
-      --gray7: hsl(0, 0%, 85.8%);
-      --gray8: hsl(0, 0%, 78%);
-      --gray9: hsl(0, 0%, 56.1%);
-      --gray10: hsl(0, 0%, 52.3%);
-      --gray11: hsl(0, 0%, 43.5%);
-      --gray12: hsl(0, 0%, 9%);
-      --border-radius: 8px;
-      box-sizing: border-box;
-      padding: 0;
-      margin: 0;
-      list-style: none;
-      outline: 0;
-      z-index: 999999999;
-      transition: transform .4s ease
-    }
-
-    @media (hover:none) and (pointer:coarse) {
-      [data-sonner-toaster][data-lifted=true] {
-        transform: none
-      }
-    }
-
-    [data-sonner-toaster][data-x-position=right] {
-      right: var(--offset-right)
-    }
-
-    [data-sonner-toaster][data-x-position=left] {
-      left: var(--offset-left)
-    }
-
-    [data-sonner-toaster][data-x-position=center] {
-      left: 50%;
-      transform: translateX(-50%)
-    }
-
-    [data-sonner-toaster][data-y-position=top] {
-      top: var(--offset-top)
-    }
-
-    [data-sonner-toaster][data-y-position=bottom] {
-      bottom: var(--offset-bottom)
-    }
-
-    [data-sonner-toast] {
-      --y: translateY(100%);
-      --lift-amount: calc(var(--lift) * var(--gap));
-      z-index: var(--z-index);
-      position: absolute;
-      opacity: 0;
-      transform: var(--y);
-      touch-action: none;
-      transition: transform .4s, opacity .4s, height .4s, box-shadow .2s;
-      box-sizing: border-box;
-      outline: 0;
-      overflow-wrap: anywhere
-    }
-
-    [data-sonner-toast][data-styled=true] {
-      padding: 16px;
-      background: var(--normal-bg);
-      border: 1px solid var(--normal-border);
-      color: var(--normal-text);
-      border-radius: var(--border-radius);
-      box-shadow: 0 4px 12px rgba(0, 0, 0, .1);
-      width: var(--width);
-      font-size: 13px;
-      display: flex;
-      align-items: center;
-      gap: 6px
-    }
-
-    [data-sonner-toast]:focus-visible {
-      box-shadow: 0 4px 12px rgba(0, 0, 0, .1), 0 0 0 2px rgba(0, 0, 0, .2)
-    }
-
-    [data-sonner-toast][data-y-position=top] {
-      top: 0;
-      --y: translateY(-100%);
-      --lift: 1;
-      --lift-amount: calc(1 * var(--gap))
-    }
-
-    [data-sonner-toast][data-y-position=bottom] {
-      bottom: 0;
-      --y: translateY(100%);
-      --lift: -1;
-      --lift-amount: calc(var(--lift) * var(--gap))
-    }
-
-    [data-sonner-toast][data-styled=true] [data-description] {
-      font-weight: 400;
-      line-height: 1.4;
-      color: #3f3f3f
-    }
-
-    [data-rich-colors=true][data-sonner-toast][data-styled=true] [data-description] {
-      color: inherit
-    }
-
-    [data-sonner-toaster][data-sonner-theme=dark] [data-description] {
-      color: #e8e8e8
-    }
-
-    [data-sonner-toast][data-styled=true] [data-title] {
-      font-weight: 500;
-      line-height: 1.5;
-      color: inherit
-    }
-
-    [data-sonner-toast][data-styled=true] [data-icon] {
-      display: flex;
-      height: 16px;
-      width: 16px;
-      position: relative;
-      justify-content: flex-start;
-      align-items: center;
-      flex-shrink: 0;
-      margin-left: var(--toast-icon-margin-start);
-      margin-right: var(--toast-icon-margin-end)
-    }
-    [data-sonner-toast][data-styled=true] [data-icon] svg {
-      height: 100%;
-      width: 100%
-    }
-  </style>
   <script src="https://js.stripe.com/basil/stripe.js"></script>
 </head>
 
@@ -191,7 +28,7 @@
     <div role="region" aria-label="Notifications (F8)" tabindex="-1" style="pointer-events: none;">
       <ol tabindex="-1"
         class="fixed top-4 right-4 z-[9999] flex max-h-screen flex-col gap-3 p-0 w-[90vw] max-w-[420px] pointer-events-none md:top-6 md:right-6"
-        style="font-family: &quot;Space Grotesk&quot;, &quot;Plus Jakarta Sans&quot;, Inter, ui-sans-serif, system-ui;">
+        style="font-family: 'Space Grotesk', 'Plus Jakarta Sans', Inter, ui-sans-serif, system-ui;">
       </ol>
     </div>
     <style>
@@ -343,7 +180,8 @@
         <div class="container mx-auto px-4 sm:px-6 py-3 sm:py-4 flex items-center justify-between">
           <div
             class="md:absolute md:left-1/2 md:top-1/2 md:-translate-x-1/2 md:-translate-y-1/2 animate-fadeInLeft delay-200">
-            <img src="assets/ogscaled.png" alt="OGScaled.info" class="h-8 sm:h-10 w-auto"></div>
+            <img src="assets/ogscaled.png" alt="OGScaled.info" class="h-8 sm:h-10 w-auto">
+          </div>
           <div class="ml-auto animate-fadeInRight delay-300"><button data-apply-trigger
               class="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md font-medium focus-visible:outline-none disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg]:size-4 [&amp;_svg]:shrink-0 bg-primary text-primary-foreground hover:bg-primary/90 h-10 glass-button-primary px-4 sm:px-6 py-2 sm:py-2.5 text-sm sm:text-base">Apply<svg
                 xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
@@ -365,16 +203,17 @@
             <video src="https://framerusercontent.com/assets/Cw9D8nOGuMDx0eVn02OhggPWXg.mp4" autoplay="" muted
               playsinline="" loop="" preload="auto" disablepictureinpicture="" controlslist="nodownload"
               class="scale-[2.0] md:scale-[1.0]"
-              style="width: 100%; height: 100%; object-fit: cover; object-position: 50% 50%;"></video></div>
+              style="width: 100%; height: 100%; object-fit: cover; object-position: 50% 50%;"></video>
+          </div>
           <div class="absolute inset-0 pointer-events-none"
             style="z-index: 2; background-image: url(&quot;https://framerusercontent.com/images/WXwwArEbCEXxVkbbiaI5FD2o.png&quot;); background-repeat: repeat; background-size: 50px 50px; mix-blend-mode: multiply; opacity: 0.85; filter: invert(1);">
           </div>
         </div>
         <div class="max-w-7xl mx-auto space-y-8 relative z-10 px-6 md:ml-[20%]">
           <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full animate-fadeInUp delay-400"
-            style="background: rgba(255, 255, 255, 0.05); backdrop-filter: blur(20px); border: 1px solid rgba(255, 255, 255, 0.08); box-shadow: rgba(255, 255, 255, 0.03) 0px 4px 24px 0px, rgba(255, 255, 255, 0.05) 0px 1px 2px 0px inset;">
-            <div class="w-1.5 h-1.5 bg-gray-400 rounded-full animate-pulse"></div><span
-              class="text-xs font-medium text-gray-400 uppercase tracking-wider">Limited Access</span>
+            style="background: rgba(255, 213, 0, 0.05); backdrop-filter: blur(20px); border: 1px solid rgba(255, 255, 255, 0.08); box-shadow: rgba(255, 255, 255, 0.03) 0px 4px 24px 0px, rgba(255, 255, 255, 0.05) 0px 1px 2px 0px inset;">
+            <div class="w-1.5 h-1.5 bg-red-400 rounded-full animate-pulse"></div><span
+              class="text-xs font-medium text--400 uppercase tracking-wider">Limited Access</span>
           </div>
           <div class="animate-fadeInUp delay-500">
             <style>
@@ -417,13 +256,16 @@
               style="background: linear-gradient(135deg, rgba(255, 255, 255, 0.95) 0%, rgba(160, 160, 160, 0.85) 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">
               <span style="display: block; font-weight: 600;">On Average,Our</span>
               <span style="display: block; font-weight: 600;">Reselling Client Makes</span>
-              <span style="display: block; font-weight: 400; letter-spacing: -0.02em;">$14,648 / Month</span>
+              <span style="display: block; font-weight: 400; letter-spacing: -0.02em;"><span class="stat-number"
+                  data-value="14648" data-prefix="$" data-duration="2000" data-delay="700">$14,648</span> / Month</span>
             </h1>
           </div>
           <div style="height: 40px;"></div>
           <div>
-            <p class="text-gray-400 text-sm md:text-base max-w-md mb-3 leading-tight animate-fadeInUp delay-600">We'll
-              implement the exact full stack system that's built multiple 6-figure reselling coaching brands - without
+            <p class="text-gray-400 text-sm md:text-base max-w-md mb-3 leading-tight animate-fadeInUp delay-600">
+              We'll
+              implement the exact full stack system that's built multiple 6-figure reselling coaching brands -
+              without
               any slow months or burning out from content creation.</p>
             <div class="flex flex-col sm:flex-row gap-4 justify-start mt-6"><button data-apply-trigger
                 class="inline-flex items-center justify-center gap-2 whitespace-nowrap font-medium focus-visible:outline-none disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg]:size-4 [&amp;_svg]:shrink-0 bg-primary text-primary-foreground hover:bg-primary/90 h-11 rounded-md glass-button-primary px-8 py-6 text-lg animate-scaleIn delay-700">Apply
@@ -435,25 +277,34 @@
                 </svg></button></div>
           </div>
           <div class="flex flex-row items-start justify-center md:justify-start gap-8 sm:gap-16 -mt-2">
-            <div class="text-center animate-fadeInUp delay-900"><span
-                class="text-3xl md:text-3xl lg:text-4xl font-bold text-white block">$1.7M</span><span
-                class="text-xs sm:text-base text-glass-secondary block mt-1">Client Revenue</span></div>
-            <div class="text-center animate-fadeInUp delay-1000"><span
-                class="text-3xl md:text-3xl lg:text-4xl font-bold text-white block pl-1">30+</span><span
-                class="text-xs sm:text-base text-glass-secondary block mt-1">Clients Helped</span></div>
-            <div class="text-center animate-fadeInUp" style="animation-delay: 1100ms;"><span
-                class="text-3xl md:text-3xl lg:text-4xl font-bold text-white block">90</span><span
-                class="text-xs sm:text-base text-glass-secondary block mt-1">Days to Transform</span></div>
+            <div class="text-center animate-fadeInUp delay-900">
+              <span class="text-3xl md:text-3xl lg:text-4xl font-bold text-white block stat-number" data-value="1700000"
+                data-prefix="$" data-format="short" data-duration="1000" data-delay="900">$1.7M</span>
+              <span class="text-xs sm:text-base text-glass-secondary block mt-1">Client Revenue</span>
+            </div>
+            <div class="text-center animate-fadeInUp delay-1000">
+              <span class="text-3xl md:text-3xl lg:text-4xl font-bold text-white block pl-1 stat-number" data-value="30"
+                data-suffix="+" data-duration="1000" data-delay="1000">30+</span>
+              <span class="text-xs sm:text-base text-glass-secondary block mt-1">Clients Helped</span>
+            </div>
+            <div class="text-center animate-fadeInUp" style="animation-delay: 1100ms;">
+              <span class="text-3xl md:text-3xl lg:text-4xl font-bold text-white block stat-number" data-value="90"
+                data-duration="1000" data-delay="1100">90</span>
+              <span class="text-xs sm:text-base text-glass-secondary block mt-1">Days to Transform</span>
+            </div>
           </div>
         </div>
       </section>
+      <!-- external stats animation script -->
+      <script src="src/scripts/stats-animate.js" defer></script>
       <section class="py-8 md:py-16 px-6 relative overflow-hidden">
         <div class="max-w-7xl mx-auto">
           <div class="text-center mb-12">
             <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full mb-6"
               style="background: rgba(255, 255, 255, 0.05); backdrop-filter: blur(20px); border: 1px solid rgba(255, 255, 255, 0.08); box-shadow: rgba(255, 255, 255, 0.03) 0px 4px 24px 0px, rgba(255, 255, 255, 0.05) 0px 1px 2px 0px inset;">
-              <div class="w-2 h-2 bg-gray-400 rounded-full animate-pulse"></div><span
-                class="text-sm font-medium text-gray-400 uppercase tracking-wider">Trusted By Industry Leaders</span>
+              <div class="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div><span
+                class="text-sm font-medium text-gray-400 uppercase tracking-wider">Trusted By Industry
+                Leaders</span>
             </div>
             <h3 class="text-3xl md:text-4xl font-bold text-glass-primary">Creators We've <span
                 class="gradient-text bg-gradient-to-r from-[#C99A16] to-[#EDC249] bg-clip-text text-transparent">Worked
@@ -1593,7 +1444,8 @@
           <div class="mb-20">
             <div class="text-center mb-12">
               <h3 class="text-3xl md:text-4xl font-bold text-glass-primary mb-4">Real Stories, Real Results</h3>
-              <p class="text-lg text-glass-secondary">Hear directly from our clients about their transformations</p>
+              <p class="text-lg text-glass-secondary">Hear directly from our clients about their transformations
+              </p>
             </div>
             <div class="md:hidden relative">
               <div
@@ -1620,7 +1472,8 @@
                           stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
                           class="lucide lucide-play h-10 w-10 text-black fill-black ml-1">
                           <polygon points="6 3 20 12 6 21 6 3"></polygon>
-                        </svg></div>
+                        </svg>
+                      </div>
                     </div>
                     <div
                       class="absolute top-3 left-3 right-3 flex items-center gap-2 p-2 rounded-lg z-30 pointer-events-none"
@@ -1632,7 +1485,8 @@
                         <div class="text-white/70 text-xs">415K followers</div>
                       </div>
                     </div>
-                    <div class="absolute inset-0 transition-opacity duration-300 opacity-0 pointer-events-none"></div>
+                    <div class="absolute inset-0 transition-opacity duration-300 opacity-0 pointer-events-none">
+                    </div>
                   </div>
                   <div class="relative rounded-2xl overflow-hidden group cursor-pointer"
                     style="width: 240px; height: 426px; background: linear-gradient(135deg, rgba(192, 192, 192, 0.08) 0%, rgba(169, 169, 169, 0.05) 100%); backdrop-filter: blur(20px); border: 1px solid rgba(255, 255, 255, 0.15); box-shadow: rgba(255, 255, 255, 0.2) 0px 2px 4px 0px inset, rgba(0, 0, 0, 0.1) 0px -2px 4px 0px inset;">
@@ -1645,7 +1499,8 @@
                           stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
                           class="lucide lucide-play h-10 w-10 text-black fill-black ml-1">
                           <polygon points="6 3 20 12 6 21 6 3"></polygon>
-                        </svg></div>
+                        </svg>
+                      </div>
                     </div>
                     <div
                       class="absolute top-3 left-3 right-3 flex items-center gap-2 p-2 rounded-lg z-30 pointer-events-none"
@@ -1657,7 +1512,8 @@
                         <div class="text-white/70 text-xs">81K followers</div>
                       </div>
                     </div>
-                    <div class="absolute inset-0 transition-opacity duration-300 opacity-0 pointer-events-none"></div>
+                    <div class="absolute inset-0 transition-opacity duration-300 opacity-0 pointer-events-none">
+                    </div>
                   </div>
                   <div class="relative rounded-2xl overflow-hidden group cursor-pointer"
                     style="width: 240px; height: 426px; background: linear-gradient(135deg, rgba(192, 192, 192, 0.08) 0%, rgba(169, 169, 169, 0.05) 100%); backdrop-filter: blur(20px); border: 1px solid rgba(255, 255, 255, 0.15); box-shadow: rgba(255, 255, 255, 0.2) 0px 2px 4px 0px inset, rgba(0, 0, 0, 0.1) 0px -2px 4px 0px inset;">
@@ -1670,7 +1526,8 @@
                           stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
                           class="lucide lucide-play h-10 w-10 text-black fill-black ml-1">
                           <polygon points="6 3 20 12 6 21 6 3"></polygon>
-                        </svg></div>
+                        </svg>
+                      </div>
                     </div>
                     <div
                       class="absolute top-3 left-3 right-3 flex items-center gap-2 p-2 rounded-lg z-30 pointer-events-none"
@@ -1682,7 +1539,8 @@
                         <div class="text-white/70 text-xs">90K followers</div>
                       </div>
                     </div>
-                    <div class="absolute inset-0 transition-opacity duration-300 opacity-0 pointer-events-none"></div>
+                    <div class="absolute inset-0 transition-opacity duration-300 opacity-0 pointer-events-none">
+                    </div>
                   </div>
                   <div class="relative rounded-2xl overflow-hidden group cursor-pointer"
                     style="width: 240px; height: 426px; background: linear-gradient(135deg, rgba(192, 192, 192, 0.08) 0%, rgba(169, 169, 169, 0.05) 100%); backdrop-filter: blur(20px); border: 1px solid rgba(255, 255, 255, 0.15); box-shadow: rgba(255, 255, 255, 0.2) 0px 2px 4px 0px inset, rgba(0, 0, 0, 0.1) 0px -2px 4px 0px inset;">
@@ -1695,7 +1553,8 @@
                           stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
                           class="lucide lucide-play h-10 w-10 text-black fill-black ml-1">
                           <polygon points="6 3 20 12 6 21 6 3"></polygon>
-                        </svg></div>
+                        </svg>
+                      </div>
                     </div>
                     <div
                       class="absolute top-3 left-3 right-3 flex items-center gap-2 p-2 rounded-lg z-30 pointer-events-none"
@@ -1707,7 +1566,8 @@
                         <div class="text-white/70 text-xs">90K followers</div>
                       </div>
                     </div>
-                    <div class="absolute inset-0 transition-opacity duration-300 opacity-0 pointer-events-none"></div>
+                    <div class="absolute inset-0 transition-opacity duration-300 opacity-0 pointer-events-none">
+                    </div>
                   </div>
                   <div class="relative rounded-2xl overflow-hidden group cursor-pointer"
                     style="width: 240px; height: 426px; background: linear-gradient(135deg, rgba(192, 192, 192, 0.08) 0%, rgba(169, 169, 169, 0.05) 100%); backdrop-filter: blur(20px); border: 1px solid rgba(255, 255, 255, 0.15); box-shadow: rgba(255, 255, 255, 0.2) 0px 2px 4px 0px inset, rgba(0, 0, 0, 0.1) 0px -2px 4px 0px inset;">
@@ -1720,7 +1580,8 @@
                           stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
                           class="lucide lucide-play h-10 w-10 text-black fill-black ml-1">
                           <polygon points="6 3 20 12 6 21 6 3"></polygon>
-                        </svg></div>
+                        </svg>
+                      </div>
                     </div>
                     <div
                       class="absolute top-3 left-3 right-3 flex items-center gap-2 p-2 rounded-lg z-30 pointer-events-none"
@@ -1732,7 +1593,8 @@
                         <div class="text-white/70 text-xs">21K followers</div>
                       </div>
                     </div>
-                    <div class="absolute inset-0 transition-opacity duration-300 opacity-0 pointer-events-none"></div>
+                    <div class="absolute inset-0 transition-opacity duration-300 opacity-0 pointer-events-none">
+                    </div>
                   </div>
                   <div class="relative rounded-2xl overflow-hidden group cursor-pointer"
                     style="width: 240px; height: 426px; background: linear-gradient(135deg, rgba(192, 192, 192, 0.08) 0%, rgba(169, 169, 169, 0.05) 100%); backdrop-filter: blur(20px); border: 1px solid rgba(255, 255, 255, 0.15); box-shadow: rgba(255, 255, 255, 0.2) 0px 2px 4px 0px inset, rgba(0, 0, 0, 0.1) 0px -2px 4px 0px inset;">
@@ -1745,7 +1607,8 @@
                           stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
                           class="lucide lucide-play h-10 w-10 text-black fill-black ml-1">
                           <polygon points="6 3 20 12 6 21 6 3"></polygon>
-                        </svg></div>
+                        </svg>
+                      </div>
                     </div>
                     <div
                       class="absolute top-3 left-3 right-3 flex items-center gap-2 p-2 rounded-lg z-30 pointer-events-none"
@@ -1757,7 +1620,8 @@
                         <div class="text-white/70 text-xs">78K followers</div>
                       </div>
                     </div>
-                    <div class="absolute inset-0 transition-opacity duration-300 opacity-0 pointer-events-none"></div>
+                    <div class="absolute inset-0 transition-opacity duration-300 opacity-0 pointer-events-none">
+                    </div>
                   </div>
                   <div class="relative rounded-2xl overflow-hidden group cursor-pointer"
                     style="width: 240px; height: 426px; background: linear-gradient(135deg, rgba(192, 192, 192, 0.08) 0%, rgba(169, 169, 169, 0.05) 100%); backdrop-filter: blur(20px); border: 1px solid rgba(255, 255, 255, 0.15); box-shadow: rgba(255, 255, 255, 0.2) 0px 2px 4px 0px inset, rgba(0, 0, 0, 0.1) 0px -2px 4px 0px inset;">
@@ -1770,7 +1634,8 @@
                           stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
                           class="lucide lucide-play h-10 w-10 text-black fill-black ml-1">
                           <polygon points="6 3 20 12 6 21 6 3"></polygon>
-                        </svg></div>
+                        </svg>
+                      </div>
                     </div>
                     <div
                       class="absolute top-3 left-3 right-3 flex items-center gap-2 p-2 rounded-lg z-30 pointer-events-none"
@@ -1782,7 +1647,8 @@
                         <div class="text-white/70 text-xs">127K followers</div>
                       </div>
                     </div>
-                    <div class="absolute inset-0 transition-opacity duration-300 opacity-0 pointer-events-none"></div>
+                    <div class="absolute inset-0 transition-opacity duration-300 opacity-0 pointer-events-none">
+                    </div>
                   </div>
                 </div>
               </div>
@@ -1811,7 +1677,8 @@
                           stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
                           class="lucide lucide-play h-10 w-10 text-black fill-black ml-1">
                           <polygon points="6 3 20 12 6 21 6 3"></polygon>
-                        </svg></div>
+                        </svg>
+                      </div>
                     </div>
                     <div
                       class="absolute top-3 left-3 right-3 flex items-center gap-2 p-2 rounded-lg z-30 pointer-events-none"
@@ -1823,7 +1690,8 @@
                         <div class="text-white/70 text-xs">415K followers</div>
                       </div>
                     </div>
-                    <div class="absolute inset-0 transition-opacity duration-300 opacity-0 pointer-events-none"></div>
+                    <div class="absolute inset-0 transition-opacity duration-300 opacity-0 pointer-events-none">
+                    </div>
                   </div>
                 </div>
                 <div class="flex justify-center">
@@ -1838,7 +1706,8 @@
                           stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
                           class="lucide lucide-play h-10 w-10 text-black fill-black ml-1">
                           <polygon points="6 3 20 12 6 21 6 3"></polygon>
-                        </svg></div>
+                        </svg>
+                      </div>
                     </div>
                     <div
                       class="absolute top-3 left-3 right-3 flex items-center gap-2 p-2 rounded-lg z-30 pointer-events-none"
@@ -1850,7 +1719,8 @@
                         <div class="text-white/70 text-xs">81K followers</div>
                       </div>
                     </div>
-                    <div class="absolute inset-0 transition-opacity duration-300 opacity-0 pointer-events-none"></div>
+                    <div class="absolute inset-0 transition-opacity duration-300 opacity-0 pointer-events-none">
+                    </div>
                   </div>
                 </div>
                 <div class="flex justify-center">
@@ -1865,7 +1735,8 @@
                           stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
                           class="lucide lucide-play h-10 w-10 text-black fill-black ml-1">
                           <polygon points="6 3 20 12 6 21 6 3"></polygon>
-                        </svg></div>
+                        </svg>
+                      </div>
                     </div>
                     <div
                       class="absolute top-3 left-3 right-3 flex items-center gap-2 p-2 rounded-lg z-30 pointer-events-none"
@@ -1877,7 +1748,8 @@
                         <div class="text-white/70 text-xs">90K followers</div>
                       </div>
                     </div>
-                    <div class="absolute inset-0 transition-opacity duration-300 opacity-0 pointer-events-none"></div>
+                    <div class="absolute inset-0 transition-opacity duration-300 opacity-0 pointer-events-none">
+                    </div>
                   </div>
                 </div>
                 <div class="flex justify-center">
@@ -1892,7 +1764,8 @@
                           stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
                           class="lucide lucide-play h-10 w-10 text-black fill-black ml-1">
                           <polygon points="6 3 20 12 6 21 6 3"></polygon>
-                        </svg></div>
+                        </svg>
+                      </div>
                     </div>
                     <div
                       class="absolute top-3 left-3 right-3 flex items-center gap-2 p-2 rounded-lg z-30 pointer-events-none"
@@ -1904,7 +1777,8 @@
                         <div class="text-white/70 text-xs">90K followers</div>
                       </div>
                     </div>
-                    <div class="absolute inset-0 transition-opacity duration-300 opacity-0 pointer-events-none"></div>
+                    <div class="absolute inset-0 transition-opacity duration-300 opacity-0 pointer-events-none">
+                    </div>
                   </div>
                 </div>
                 <div class="flex justify-center">
@@ -1919,7 +1793,8 @@
                           stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
                           class="lucide lucide-play h-10 w-10 text-black fill-black ml-1">
                           <polygon points="6 3 20 12 6 21 6 3"></polygon>
-                        </svg></div>
+                        </svg>
+                      </div>
                     </div>
                     <div
                       class="absolute top-3 left-3 right-3 flex items-center gap-2 p-2 rounded-lg z-30 pointer-events-none"
@@ -1931,7 +1806,8 @@
                         <div class="text-white/70 text-xs">21K followers</div>
                       </div>
                     </div>
-                    <div class="absolute inset-0 transition-opacity duration-300 opacity-0 pointer-events-none"></div>
+                    <div class="absolute inset-0 transition-opacity duration-300 opacity-0 pointer-events-none">
+                    </div>
                   </div>
                 </div>
                 <div class="flex justify-center">
@@ -1946,7 +1822,8 @@
                           stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
                           class="lucide lucide-play h-10 w-10 text-black fill-black ml-1">
                           <polygon points="6 3 20 12 6 21 6 3"></polygon>
-                        </svg></div>
+                        </svg>
+                      </div>
                     </div>
                     <div
                       class="absolute top-3 left-3 right-3 flex items-center gap-2 p-2 rounded-lg z-30 pointer-events-none"
@@ -1958,7 +1835,8 @@
                         <div class="text-white/70 text-xs">78K followers</div>
                       </div>
                     </div>
-                    <div class="absolute inset-0 transition-opacity duration-300 opacity-0 pointer-events-none"></div>
+                    <div class="absolute inset-0 transition-opacity duration-300 opacity-0 pointer-events-none">
+                    </div>
                   </div>
                 </div>
               </div>
@@ -1968,7 +1846,8 @@
             <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full"
               style="background: rgba(255, 255, 255, 0.05); backdrop-filter: blur(20px); border: 1px solid rgba(255, 255, 255, 0.08); box-shadow: rgba(255, 255, 255, 0.03) 0px 4px 24px 0px, rgba(255, 255, 255, 0.05) 0px 1px 2px 0px inset;">
               <div class="w-2 h-2 bg-gray-400 rounded-full animate-pulse"></div><span
-                class="text-sm font-medium text-gray-400 uppercase tracking-wider">Complete Program Overview</span>
+                class="text-sm font-medium text-gray-400 uppercase tracking-wider">Complete Program
+                Overview</span>
             </div>
             <h2 class="text-5xl md:text-7xl font-bold text-glass-primary tracking-tight">THE RESELLER<br><span
                 class="gradient-text bg-gradient-to-r from-[#C99A16] to-[#EDC249] bg-clip-text text-transparent">SCALING
@@ -1999,7 +1878,8 @@
                   <div
                     class="items-center rounded-full border text-xs font-semibold focus:outline-none bg-primary text-primary-foreground hover:bg-primary/80 inline-block mb-3 px-4 py-2 bg-gradient-to-r from-[#C99A16]/20 to-[#EDC249]/20 border-[#EDC249]/30">
                     Weeks 1-2</div>
-                  <h3 class="text-2xl md:text-3xl font-bold text-glass-primary mb-3">Vendor Store &amp; Offer Redesign
+                  <h3 class="text-2xl md:text-3xl font-bold text-glass-primary mb-3">Vendor Store &amp; Offer
+                    Redesign
                   </h3>
                   <ul class="space-y-2 text-glass-secondary md:text-right">
                     <li>✓ Premium vendor store selling supplier access</li>
@@ -2021,7 +1901,8 @@
                   <div
                     class="items-center rounded-full border text-xs font-semibold focus:outline-none bg-primary text-primary-foreground hover:bg-primary/80 inline-block mb-3 px-4 py-2 bg-gradient-to-r from-[#C99A16]/20 to-[#EDC249]/20 border-[#EDC249]/30">
                     Week 3</div>
-                  <h3 class="text-2xl md:text-3xl font-bold text-glass-primary mb-3">Premium Discord Community</h3>
+                  <h3 class="text-2xl md:text-3xl font-bold text-glass-primary mb-3">Premium Discord Community
+                  </h3>
                   <ul class="space-y-2 text-glass-secondary">
                     <li>✓ Premium Discord server with paid access</li>
                     <li>✓ Exclusive channels, bots &amp; receipt generators</li>
@@ -2061,7 +1942,8 @@
                   <div
                     class="items-center rounded-full border text-xs font-semibold focus:outline-none bg-primary text-primary-foreground hover:bg-primary/80 inline-block mb-3 px-4 py-2 bg-gradient-to-r from-[#C99A16]/20 to-[#EDC249]/20 border-[#EDC249]/30">
                     Weeks 6-7</div>
-                  <h3 class="text-2xl md:text-3xl font-bold text-glass-primary mb-3">Mentorship Program Launch</h3>
+                  <h3 class="text-2xl md:text-3xl font-bold text-glass-primary mb-3">Mentorship Program Launch
+                  </h3>
                   <ul class="space-y-2 text-glass-secondary">
                     <li>✓ High-ticket mentorship funnel built</li>
                     <li>✓ 1-on-1 and group coaching structure</li>
@@ -2080,7 +1962,8 @@
                   <div
                     class="items-center rounded-full border text-xs font-semibold focus:outline-none bg-primary text-primary-foreground hover:bg-primary/80 inline-block mb-3 px-4 py-2 bg-gradient-to-r from-[#C99A16]/20 to-[#EDC249]/20 border-[#EDC249]/30">
                     Weeks 8-9</div>
-                  <h3 class="text-2xl md:text-3xl font-bold text-glass-primary mb-3">Scale &amp; Optimize Revenue</h3>
+                  <h3 class="text-2xl md:text-3xl font-bold text-glass-primary mb-3">Scale &amp; Optimize
+                    Revenue</h3>
                   <ul class="space-y-2 text-glass-secondary md:text-right">
                     <li>✓ Multiple revenue streams optimized</li>
                     <li>✓ Content strategy driving consistent sales</li>
@@ -2101,7 +1984,8 @@
                   <div
                     class="items-center rounded-full border text-xs font-semibold focus:outline-none bg-primary text-primary-foreground hover:bg-primary/80 inline-block mb-3 px-4 py-2 bg-gradient-to-r from-[#C99A16]/20 to-[#EDC249]/20 border-[#EDC249]/30">
                     Weeks 10-12</div>
-                  <h3 class="text-2xl md:text-3xl font-bold text-glass-primary mb-3">Fully Automated Business</h3>
+                  <h3 class="text-2xl md:text-3xl font-bold text-glass-primary mb-3">Fully Automated Business
+                  </h3>
                   <ul class="space-y-2 text-glass-secondary">
                     <li>✓ Vendor store generating passive income</li>
                     <li>✓ Discord community self-managing</li>
@@ -2121,8 +2005,10 @@
               style="background: linear-gradient(135deg, rgba(237, 194, 73, 0.08) 0%, rgba(201, 154, 22, 0.08) 100%); border-color: rgba(237, 194, 73, 0.3); backdrop-filter: blur(10px);">
               LIMITED ACCESS</div>
             <h2 class="text-4xl md:text-5xl font-bold text-glass-primary">The Clock Never Stops Ticking</h2>
-            <p class="text-xl text-glass-secondary max-w-2xl mx-auto">While you're reading this, someone just hit their
-              first $100K month using our system. Tomorrow, it could be you. Or you could still be watching from the
+            <p class="text-xl text-glass-secondary max-w-2xl mx-auto">While you're reading this, someone just
+              hit their
+              first $100K month using our system. Tomorrow, it could be you. Or you could still be watching from
+              the
               sidelines.</p>
             <div class="flex flex-col items-center gap-6"><button
                 class="inline-flex items-center justify-center gap-2 whitespace-nowrap font-medium focus-visible:outline-none disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg]:size-4 [&amp;_svg]:shrink-0 bg-primary text-primary-foreground hover:bg-primary/90 h-11 rounded-md glass-button-primary px-8 py-6 text-lg shadow-2xl shadow-[#EDC249]/40 hover:shadow-[#EDC249]/60 transition-all hover:scale-105">Get
@@ -2142,10 +2028,9 @@
       </section>
       <footer class="py-12 px-6 border-t border-white/10">
         <div class="max-w-7xl mx-auto">
-          <div class="flex flex-col md:flex-row items-center justify-between gap-6 mb-8"><img
-              src="https://ik.imagekit.io/scaledinfo/scaled.info/2(1).png?updatedAt=1756928907534" alt="Scaled.info"
-              class="h-8 w-auto">
-            <div class="text-glass-secondary text-sm">© 2025 Scaled.info</div>
+          <div class="flex flex-col md:flex-row items-center justify-between gap-6 mb-8"><img src="assets/ogscaled.png"
+              alt="Scaled.info" class="h-8 w-auto">
+            <div class="text-glass-secondary text-sm">© 2025 OGScaled.info</div>
           </div>
           <div class="text-center pt-8">
             <div class="border-t border-white/10 mb-4"></div>
@@ -2155,10 +2040,14 @@
           <div class="text-center pt-8">
             <div class="border-t border-white/10 mb-4"></div>
             <p class="text-xs text-glass-secondary/70 max-w-4xl mx-auto leading-relaxed"><span
-                class="font-semibold">Disclaimer:</span> Results vary based on individual effort, market conditions, and
-              business factors. The testimonials and examples shown are exceptional results and not typical. Your
-              results will depend on your work ethic, business experience, and market conditions. We make no guarantee
-              of specific results or income. All business involves risk and requires consistent effort and dedication to
+                class="font-semibold">Disclaimer:</span> Results vary based on individual effort, market
+              conditions, and
+              business factors. The testimonials and examples shown are exceptional results and not typical.
+              Your
+              results will depend on your work ethic, business experience, and market conditions. We make no
+              guarantee
+              of specific results or income. All business involves risk and requires consistent effort and
+              dedication to
               achieve success.</p>
           </div>
         </div>
@@ -2170,7 +2059,7 @@
 
   <!-- Main app script -->
   <script src="js/app.js"></script>
-  
+
   <!-- Timeline functionality -->
   <script src="src/scripts/timeline.js"></script>
   <!-- Apply modal functionality -->
